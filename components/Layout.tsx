@@ -1,9 +1,13 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { FC, ReactNode } from 'react';
+
 import Header from './Header';
 import Footer from './Footer';
 
-const Layout = ({ children }) => (
+interface Props {
+  children: ReactNode;
+}
+const Layout: FC<Props> = ({ children }) => (
   <>
     <Header />
     {children}

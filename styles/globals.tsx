@@ -1,3 +1,6 @@
+import { createGlobalStyle } from 'styled-components';
+
+export const GlobalStyle = createGlobalStyle`
 html,
 body {
   padding: 0;
@@ -5,7 +8,8 @@ body {
 }
 
 body {
-  background: linear-gradient(to bottom, #4e54c8, #8f94fb);
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to bottom, #3f87a6, #ebf8e1, #f69d3c);
   color: #fff;
   font-size: 20px;
 }
@@ -41,3 +45,8 @@ footer {
   align-items: center;
   text-transform: uppercase;
 }
+
+a {
+  color: #fff;
+  text-decoration: none;
+}`;

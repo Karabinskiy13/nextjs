@@ -1,10 +1,10 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import styles from '../styles/NavBar.module.scss';
+
+import { NavBarStyle } from '../styles/NavBar';
 
 const NavBar = () => {
-  const pathname = useRouter();
   const navigation = [
     {
       id: 1,
@@ -13,26 +13,26 @@ const NavBar = () => {
     },
     {
       id: 2,
-      path: 'posts',
+      path: '/posts',
       title: 'Posts'
     },
     {
       id: 3,
-      path: 'contacts',
+      path: '/contacts',
       title: 'Contacts'
     }
   ];
   return (
-    <nav className={styles.nav}>
-      <div className={styles.logo}>NextApp</div>
-      <div className={styles.links}>
+    <NavBarStyle>
+      <div className="logo">NextApp</div>
+      <div className="link">
         {navigation.map(({ id, title, path }) => (
-          <Link className={pathname === path ? styles.active : null} key={id} href={path}>
+          <Link key={id} href={path}>
             {title}
           </Link>
         ))}
       </div>
-    </nav>
+    </NavBarStyle>
   );
 };
 

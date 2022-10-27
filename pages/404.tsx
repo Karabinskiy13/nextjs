@@ -1,8 +1,9 @@
 import React from 'react';
+
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Heading from '../components/Heading';
-import styles from '../styles/404.module.scss';
+
+import { ErrorStyle } from '../styles/404';
 
 const Error = () => {
   const router = useRouter();
@@ -10,16 +11,16 @@ const Error = () => {
   useEffect(() => {
     setTimeout(() => {
       router.push('/');
-    }, 4000);
+    }, 3000);
   }, [router]);
 
   return (
-    <div className={styles.wrapper}>
+    <ErrorStyle>
       <div>
-        <Heading text="404" />
-        <Heading tag="h2" text="Something is going wrong..." />
+        <h1>404</h1>
+        <h2>Something going wrong...</h2>
       </div>
-    </div>
+    </ErrorStyle>
   );
 };
 
