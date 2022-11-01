@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
+import { type } from 'os';
 import React, { FC } from 'react';
 import { Contact } from '../types';
 
-interface Props {
+type Props = {
   contact: Contact;
-}
+};
 
 const ContactInfo: FC<Props> = ({ contact }) => {
   const { name, email, adress } = contact || {};

@@ -2,9 +2,9 @@
 import React from 'react';
 import { Post } from '../types';
 
-interface Props {
+type Props = {
   post: Post;
-}
+};
 
 const PostInfo = ({ post }: Props) => {
   const { title, body } = post || {};

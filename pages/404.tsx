@@ -11,7 +11,7 @@ const Error = () => {
   useEffect(() => {
     setTimeout(() => {
       router.push('/');
-    }, 3000);
+    }, 1000);
   }, [router]);
 
   return (

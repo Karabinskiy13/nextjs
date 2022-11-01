@@ -9,6 +9,7 @@ export type Contact = {
     zipcode: string;
   };
 };
+
 export type Post = {
   id?: number;
   title: string;
