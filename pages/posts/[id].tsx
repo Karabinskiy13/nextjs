@@ -5,11 +5,11 @@ import PostInfo from '../../components/PostInfo';
 import { GetServerSideProps } from 'next';
 import { Post } from '../../types';
 
-type Props = {
+export type PostItemProps = {
   post: Post;
 };
 
-const Post: FC<Props> = ({ post }) => {
+const Post: FC<PostItemProps> = ({ post }) => {
   return (
     <>
       <Head>

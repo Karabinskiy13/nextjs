@@ -5,11 +5,11 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { Post } from '../../types';
 
-type Props = {
+type PostsProps = {
   posts: Post[];
 };
 
-const Posts: FC<Props> = ({ posts }) => {
+const Posts: FC<PostsProps> = ({ posts }) => {
   return (
     <>
       <Head>

@@ -6,11 +6,11 @@ import Head from 'next/head';
 import ContactInfo from '../../components/ContactInfo';
 import { Contact } from '../../types';
 
-type Props = {
+export type ContactItemProps = {
   contact: Contact;
 };
 
-const Contact: FC<Props> = ({ contact }) => (
+const Contact: FC<ContactItemProps> = ({ contact }) => (
   <>
     <Head>
       <title>Contact</title>

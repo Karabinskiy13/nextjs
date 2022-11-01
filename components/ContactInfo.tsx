@@ -3,11 +3,9 @@ import { type } from 'os';
 import React, { FC } from 'react';
 import { Contact } from '../types';
 
-type Props = {
-  contact: Contact;
-};
+import { ContactItemProps } from '../pages/contacts/[id]';
 
-const ContactInfo: FC<Props> = ({ contact }) => {
+const ContactInfo: FC<ContactItemProps> = ({ contact }) => {
   const { name, email, adress } = contact || {};
   const { street, suite, city, zipcode } = adress || {};
 

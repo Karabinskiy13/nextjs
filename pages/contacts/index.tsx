@@ -4,11 +4,11 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Contact } from '../../types';
 
-type Props = {
+type ContactsProps = {
   contacts: Contact[];
 };
 
-const Contacts: FC<Props> = ({ contacts }) => {
+const Contacts: FC<ContactsProps> = ({ contacts }) => {
   return (
     <>
       <Head>

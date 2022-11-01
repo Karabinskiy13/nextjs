@@ -1,12 +1,8 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
-import { Post } from '../types';
+import React, { FC } from 'react';
+import { PostItemProps } from '../pages/posts/[id]';
 
-type Props = {
-  post: Post;
-};
-
-const PostInfo = ({ post }: Props) => {
+const PostInfo: FC<PostItemProps> = ({ post }) => {
   const { title, body } = post || {};
 
   if (!post) {
